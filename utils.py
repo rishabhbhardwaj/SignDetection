@@ -20,8 +20,8 @@ class DataInfo(object):
         print("Total Number of classes: ", counts.count()['class'])
         counts['sign_name'] = counts['class'].apply(self.get_sign_name)
         count_20 = counts.sort_values('class', ascending=False).head(20)
-        print("Top 20 classes distribution with Number of samples")
-        plt.figure(figsize=(10,4))
+        print("Distribution of 20 classes with Number of samples")
+        plt.figure(figsize=(10,5))
         sns.set(font_scale=1.3)
         sns.barplot(x='img_name',y='sign_name',data=count_20,orient='o')
         plt.xticks(rotation=90)
@@ -55,6 +55,7 @@ class DataAugmentation(object):
         
         transform_orig = transforms.Compose([
                                                     transforms.ToPILImage(),
+                                                    transforms.
                                                     transforms.ToTensor()
                                                 ])
         transform_brightness = transforms.Compose([
