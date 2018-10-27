@@ -2,7 +2,7 @@
 
 ## Setup
 
-    1. **Setup the environment** : Run` pip install -r requirements.txt` to set up env
+    1. Setup the environment : Run` pip install -r requirements.txt` to set up env
 
 ## Download Data
 
