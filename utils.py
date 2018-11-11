@@ -45,7 +45,26 @@ class DataInfo(object):
                 if i == 0:
                     break;
         plt.show()
-
+        
+    def display_label_info(self, loaders):
+        labels = [] 
+        #images = []
+        for loader in loaders:
+            for i, curr_data in enumerate(loader):
+                curr_data_labels = curr_data['label'].numpy()
+                #curr_data_imgs = curr_data['img'].numpy()
+                for i in xrange(len(curr_data_labels)):
+                    labels.append(curr_data_labels[i])
+                    #images.append(curr_data_imgs[i])
+        
+        fig = plt.figure()
+        fig.set_dpi(130)
+        plt.bar([0,1],[labels.count(0), labels.count(1)])
+        plt.xlabel('Classes')
+        plt.xticks(range(0,2,1))
+        plt.ylabel('Number of examples per class')
+        plt.show()
+        
 class DataAugmentation(object):
     
     def __init__(self):
