@@ -50,10 +50,15 @@ class GermanTrafficSignDataset(Dataset):
         #image = image.transpose((2, 0, 1))
         roi_points = self.ground_truth.iloc[idx, 1:-1].values.astype(np.float32)
         class_id = self.ground_truth.iloc[idx, -1].astype(np.float32)
-        sample = {'img': image, 'roi': roi_points, 'class_id': class_id}
+        label = 0
+        if int(class_id) in set([0,1,2,3,4,5,6,7,8,9,10,15,16]):
+            label = 1
+        else:
+            label = 0
+        sample = {'img': image, 'roi': roi_points, 'class_id': class_id, 'label': label}
 
         if self.transform:
             image = self.transform(image)
 
-        return {'img': image, 'roi': roi_points, 'class_id': class_id}
+        return {'img': image, 'roi': roi_points, 'class_id': class_id, 'label': label}
     
