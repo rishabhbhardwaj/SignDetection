@@ -1,4 +1,5 @@
 data/
+gtsdb_data/
 .DS_Store
 .ipynb_checkpoints/
 *.pyc

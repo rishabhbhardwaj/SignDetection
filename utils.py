@@ -53,7 +53,7 @@ class DataInfo(object):
             for i, curr_data in enumerate(loader):
                 curr_data_labels = curr_data['label'].numpy()
                 #curr_data_imgs = curr_data['img'].numpy()
-                for i in xrange(len(curr_data_labels)):
+                for i in range(len(curr_data_labels)):
                     labels.append(curr_data_labels[i])
                     #images.append(curr_data_imgs[i])
         
