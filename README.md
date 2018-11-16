@@ -5,10 +5,9 @@
     1. Setup the environment : Run` pip install -r requirements.txt` to set up env
 
 ## Download Pre-Process Data
-
-    1. Run `sh setup.sh` to download the data
-    2. Download the gtsdb tfrecords created from [here](https://drive.google.com/file/d/1hKdjTsiFm_vdtZPdto0QJihThGFOPEkq/view)
-    3. Run convert_format.py to create the test files for the notebook
+1. Run `sh setup.sh` to download the data
+2. Download the gtsdb tfrecords created from [here](https://drive.google.com/file/d/1hKdjTsiFm_vdtZPdto0QJihThGFOPEkq/view)
+3. Run convert_format.py to create the test files for the notebook
 
 ## Training
 
